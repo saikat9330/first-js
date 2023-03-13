@@ -1,0 +1,267 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    height: 10vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 100px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    /* letter-spacing: 5px; */
+}
+
+header span {
+    color: rgb(255, 0, 0);
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header h1 {
+    color: azure;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+/* .navigation.active{
+    background-color: orangered;
+} */
+
+.navigation a {
+    position: relative;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    font-size: 1.5rem;
+
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 10px;
+    left: 0;
+    bottom: 0px;
+    transform: scaleX(0);
+    transition: .5s;
+    transform-origin: right;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navigation .btnlogin-popup {
+    width: 110px;
+    height: 40px;
+    font-size: 1rem;
+    background: transparent;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    color: #fff;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnlogin-popup:hover {
+    background: #fff;
+    color: blue;
+}
+
+.warper {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    border: 2px solid gray;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 5px 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: height .2s ease;
+}
+.warper.active-popup{
+    transform: scale(1);
+}
+.warper.active{
+    height: 520px;
+}
+.form-box.login{
+    transition: .18s ease;
+    transform: translateX(0);
+}
+.warper.active .form-box.login{
+    transition: none;
+    transform: translateX(-370px);
+}
+.form-box.register{
+    position: absolute;
+    transition: none;
+    transform:translateX(370px);
+}
+.warper.active .form-box.register{
+    transition: .18s ease;
+    transform: translateX(0);
+}
+
+ .form-box.forgot{ 
+    position: absolute;
+    transition: none;
+    left: 92%;
+} 
+.warper.active-forgot .form-box.forgot{
+    transform:translateX(-370px);
+}
+.warper.active-forgot .form-box.login{
+    transition: none;
+    transform:translateX(-370px);
+}
+.form-box {
+    width: 100%;
+    padding: 40px;
+
+}
+.form-box h2{
+    font-size: 2rem;
+    color: rgba(223, 128, 5, 0.774);
+    text-align: center;
+    letter-spacing: 2px;
+    
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid black;
+    margin: 20px 0;
+}
+.input-box label{
+    position: absolute;
+    top:50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #162938;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size:1rem;
+    padding-left: 10px;
+    color: #162938;
+    
+
+}
+.icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.5rem;
+    color:#162938;
+    line-height: 57px;
+}
+.remember-forgot{
+    font-size: 1rem;
+    color: #162938;
+    font-weight: 500; 
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forgot label input{
+    accent-color: #162938;
+    margin-right: 3px;
+}
+.remember-forgot a{
+    color: #162938;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: .5ms;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+    color:#0400f8;
+}
+.btn{
+    transition:.1ms;
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.4rem
+    
+}
+.btn:hover{
+    background: #d33b0dcc;
+    color: black;
+}
+.login-register{
+    font-size: 1rem;
+    color: #162938;
+    text-align: center;
+    margin: 25px 0 10px;
+    
+}
+.login-register p a{
+    color: #220404;
+    text-decoration: none;
+    outline: none;
+}
+.login-register p a:hover{
+    text-decoration: underline;
+}
+.icont{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #162938;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+

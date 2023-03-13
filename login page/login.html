@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>login page</title>
+    
+</head>
+<body>
+    <header>
+        <h1 > <span>.S</span>aikat</h1>
+        <nav class="navigation">
+            <a href="#"><!-- <i class="fa-solid fa-house"></i>-->Home</a>
+            <a href="#"><!-- <i class="fa-solid fa-eject"></i>-->About</a>
+            <a href="#"><!-- <i class="fa-solid fa-bell-concierge">--></i>Service</a>
+            <a href="#"><!-- <i class="fa-solid fa-address-book"></i>-->Contac</a> 
+            <button class="btnlogin-popup">Log In</button>
+        </nav>
+    </header>
+    <div class="warper">
+        <div class="icont">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="form-box login">     
+            <h2>Login Here</h2>
+            <form action="#">
+                <div class="input-box">
+                    
+                    <span class="icon"><i class="fa-brands fa-mailchimp"></i></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-key"></i></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember Me</label>
+                    <a href="#" class="forg">Forgot Password</a>
+                </div>
+                <button type="submit" class="btn">Log In     
+                </button>
+                <div class="login-register">
+                    <p>Don't Have An Account?<a href="#" class="register-link">Register</a></p>
+                </div>
+                
+            </form>
+
+        </div>
+      
+        
+        <div class="form-box register">     
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="input-box"> 
+                    <span class="icon"><i class="fa-solid fa-user-secret"></i></span>
+                    <input type="text" required>
+                    <label>username</label>
+                </div>
+                <div class="input-box">
+                    
+                    <span class="icon"><i class="fa-brands fa-mailchimp"></i></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-key"></i></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">I Agree To The Terms & Conditions</label>
+                    
+                </div>
+                <button type="submit" class="btn">Register   
+                </button>
+                <div class="login-register">
+                    <p>Already Have An Account?<a href="#" class="login-link">Login</a></p>
+                </div>
+                
+            </form>
+        </div>
+        <div class="form-box forgot">     
+            <h2>Forgot Password</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><i class="fa-brands fa-mailchimp"></i></span>
+                    <input type="email" required>
+                    <label>Enter Email Id</label>
+                </div>
+                <button type="submit" class="btn">submit    
+                </button>
+                <div class="login-register">
+                    <p>Send Otp In Your Mail Id</p>
+                </div>
+                
+            </form>
+
+        </div>
+    </div>
+    <script src="log.js"></script>
+</body>
+</html>
